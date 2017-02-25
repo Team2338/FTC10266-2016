@@ -88,6 +88,9 @@ public class AutoDriveForward extends OpMode
         frontLeftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         frontRightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
+        leftShooterMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        rightShooterMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+
         // NOT USED FOR STATE
         servo = hardwareMap.servo.get("servo1");
 
@@ -258,8 +261,11 @@ public class AutoDriveForward extends OpMode
             intakeLowMotor.setPower(0.00);
             intakeHighMotor.setPower(-1.00);
 
-            leftShooterMotor.setPower(1.00);   // SHOOTER SPEED
-            rightShooterMotor.setPower(-1.00); // SHOOTER SPEED
+            leftShooterMotor.setPower(0.96);
+            rightShooterMotor.setPower(-0.96);
+
+            leftShooterMotor.setMaxSpeed(2780);
+            rightShooterMotor.setMaxSpeed(2780);
 
 
 
@@ -280,8 +286,11 @@ public class AutoDriveForward extends OpMode
             intakeLowMotor.setPower(0.00);
             intakeHighMotor.setPower(0.00);
 
-            leftShooterMotor.setPower(0.00);
-            rightShooterMotor.setPower(0.00);
+            leftShooterMotor.setPower(0.96);
+            rightShooterMotor.setPower(-0.96);
+
+            leftShooterMotor.setMaxSpeed(2800);
+            rightShooterMotor.setMaxSpeed(2800);
 
 
         }
@@ -305,6 +314,8 @@ public class AutoDriveForward extends OpMode
             rightShooterMotor.setPower(0.00);
 
         }
+
+        /*
         // Move from Vortex for 2.0 Seconds to Beacon Turn
         if ((runtime.seconds() >= 10.01) && (runtime.seconds() <= 12.00))
         {
@@ -405,7 +416,7 @@ public class AutoDriveForward extends OpMode
             rightShooterMotor.setPower(0.00);
 
         }
-
+ */
         /*
         if ((runtime.seconds() >= 15) && (runtime.seconds() <= 29.99))
         {

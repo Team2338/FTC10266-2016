@@ -302,8 +302,8 @@ public class TemplateOpMode_Iterative extends OpMode
 //        }
 
         if (gamepad2.y) {
-            leftShooterMotor.setPower(0.95);
-            rightShooterMotor.setPower(-0.95);
+            leftShooterMotor.setPower(0.80);
+            rightShooterMotor.setPower(-0.80);
 
             leftShooterMotor.setMaxSpeed(2800);
             rightShooterMotor.setMaxSpeed(2800);
