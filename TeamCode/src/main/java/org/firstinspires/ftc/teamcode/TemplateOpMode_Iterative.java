@@ -166,6 +166,7 @@ public class TemplateOpMode_Iterative extends OpMode
         }
         servo3.setPosition(positionb);
 
+        runtime.reset();
     }
     /*
      * Code to run REPEATEDLY after the driver hits PLAY but before they hit STOP

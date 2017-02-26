@@ -33,10 +33,10 @@ import static android.os.SystemClock.sleep;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@Autonomous(name="AutoDriveForward", group="Iterative Opmode")  // @Autonomous(...) is the other common choice
+@Autonomous(name="AutoShoot", group="Iterative Opmode")  // @Autonomous(...) is the other common choice
 //@Disabled
 
-public class AutoDriveForward extends OpMode
+public class AutoShoot extends OpMode
 {
     /* Declare OpMode members. */
     private ElapsedTime runtime = new ElapsedTime();
@@ -110,32 +110,32 @@ public class AutoDriveForward extends OpMode
     //TODO: Fix electrical
     public void start() // This code doesn't make sense, current code is used to compensate electrical issues
     {
-            // NEED A LARGER POSITION SO TIME DOES NOT RUN OUT
-            frontLeftMotor.setTargetPosition(17200);
-            frontRightMotor.setTargetPosition(17200);
+        // NEED A LARGER POSITION SO TIME DOES NOT RUN OUT
+        frontLeftMotor.setTargetPosition(17200);
+        frontRightMotor.setTargetPosition(17200);
 
 /*          frontLeftMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
             frontRightMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 */
-            frontLeftMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-            frontRightMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        frontLeftMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        frontRightMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
-            //frontLeftMotor.setPower(0.25);
-            //frontRightMotor.setPower(-0.25);
+        //frontLeftMotor.setPower(0.25);
+        //frontRightMotor.setPower(-0.25);
 
-            frontLeftMotor.setPower(0.00);
-            backLeftMotor.setPower(0.00);
+        frontLeftMotor.setPower(0.00);
+        backLeftMotor.setPower(0.00);
 
-            frontRightMotor.setPower(0.00);
-            backRightMotor.setPower(0.00);
+        frontRightMotor.setPower(0.00);
+        backRightMotor.setPower(0.00);
 
-            intakeLowMotor.setPower(0.00);
-            intakeHighMotor.setPower(0.00);
+        intakeLowMotor.setPower(0.00);
+        intakeHighMotor.setPower(0.00);
 
-            leftShooterMotor.setPower(0.00);
-            rightShooterMotor.setPower(0.00);
+        leftShooterMotor.setPower(0.00);
+        rightShooterMotor.setPower(0.00);
 
-            runtime.reset();
+
         /*
         telemetry.addData(" rampUp1  ", rampUp);
         if (rampUp) {
@@ -162,7 +162,7 @@ public class AutoDriveForward extends OpMode
         telemetry.addData("Front Left Ticks:", frontLeftMotor.getCurrentPosition());
         telemetry.addData("Front Right Ticks", frontRightMotor.getCurrentPosition());
 
-       // telemetry.addData("Status Before If", chuck_int);
+        // telemetry.addData("Status Before If", chuck_int);
 
         /*
         telemetry.addData("Servo Position ", position);
@@ -190,18 +190,18 @@ public class AutoDriveForward extends OpMode
                 }
             }
 */
-            // Display the current value
-            //telemetry.addData("Servo Position", "%5.2f", position);
-           // telemetry.addData(">", "Press Stop to end test." );
-           // telemetry.update();
+        // Display the current value
+        //telemetry.addData("Servo Position", "%5.2f", position);
+        // telemetry.addData(">", "Press Stop to end test." );
+        // telemetry.update();
 
-            // Set the servo to the new position and pause;
-           // servo.setPosition(position);
+        // Set the servo to the new position and pause;
+        // servo.setPosition(position);
 //            sleep(CYCLE_MS);
 
 
 
-            // USED TO JUST RUN THE INTAKE AND SHOOTER FOR PRACTICE
+        // USED TO JUST RUN THE INTAKE AND SHOOTER FOR PRACTICE
     /*    if ((runtime.seconds() >= 0) && (runtime.seconds() <= 52.50))
         {
             telemetry.addData("1 SPOOL SHOOTER ", runtime.seconds());
@@ -223,28 +223,9 @@ public class AutoDriveForward extends OpMode
 
         }
 */
-        if(runtime.seconds() >= 0 && runtime.seconds() <= 12)
-        {
-        }
 
-        if(runtime.seconds() >= 12.01 && runtime.seconds() <= 13.05)
-        {
-            frontRightMotor.setPower(-1);
-            backRightMotor.setPower(-1);
-            frontLeftMotor.setPower(1);
-            backLeftMotor.setPower(1);
-        }
-
-        if(runtime.seconds() >= 13.00 && runtime.seconds() <= 14)
-        {
-            frontRightMotor.setPower(0);
-            backRightMotor.setPower(0);
-            frontLeftMotor.setPower(0);
-            backLeftMotor.setPower(0);
-
-        }
         // Stationary, Spool up Shooters, No Intakes, 2.5 Seconds
-        if ((runtime.seconds() >= 14.01) && (runtime.seconds() <= 16.5))
+        if ((runtime.seconds() >= 0) && (runtime.seconds() <= 2.50))
         {
             telemetry.addData("1 SPOOL SHOOTER ", runtime.seconds());
             telemetry.addData("Front Left Ticks:", frontLeftMotor.getCurrentPosition());
@@ -259,25 +240,13 @@ public class AutoDriveForward extends OpMode
             intakeLowMotor.setPower(0.00);
             intakeHighMotor.setPower(0.00);
 
-            leftShooterMotor.setPower(0.78);
-            rightShooterMotor.setPower(-0.78);
+            leftShooterMotor.setPower(1.00);
+            rightShooterMotor.setPower(-1.00);
 
-            leftShooterMotor.setMaxSpeed(2780);
-            rightShooterMotor.setMaxSpeed(2780);
 
         }
-
-//        if(runtime.seconds() >= 4.51 && runtime.seconds() <= 5.5)
-//        {
-//            intakeLowMotor.setPower(0.00);
-//            intakeHighMotor.setPower(-1.00);
-//
-//            leftShooterMotor.setPower(0.75);
-//            rightShooterMotor.setPower(-0.75);
-//        }
-
         // Stationary, Keep Shooter Running, Start Center, No Front Intake, 3 Seconds
-        if ((runtime.seconds() >= 16.51) && (runtime.seconds() <= 18.50))
+        if ((runtime.seconds() >= 2.51) && (runtime.seconds() <= 5.50))
         {
             telemetry.addData("2 CENTER AND SHOOT ", runtime.seconds());
             telemetry.addData("Front Left Ticks:", frontLeftMotor.getCurrentPosition());
@@ -292,8 +261,8 @@ public class AutoDriveForward extends OpMode
             intakeLowMotor.setPower(0.00);
             intakeHighMotor.setPower(-1.00);
 
-            leftShooterMotor.setPower(0.78);
-            rightShooterMotor.setPower(-0.78);
+            leftShooterMotor.setPower(0.87);
+            rightShooterMotor.setPower(-0.87);
 
             leftShooterMotor.setMaxSpeed(2780);
             rightShooterMotor.setMaxSpeed(2780);
@@ -302,31 +271,25 @@ public class AutoDriveForward extends OpMode
 
         }
         // Stop Intake and Shooter, Move to Vortex for 2.5 Seconds
-        if ((runtime.seconds() >= 18.51) && (runtime.seconds() <= 20.4))
+        if ((runtime.seconds() >= 5.51) && (runtime.seconds() <= 8.00))
         {
             telemetry.addData("3 Move To Vortex ", runtime.seconds());
             telemetry.addData("Front Left Ticks:", frontLeftMotor.getCurrentPosition());
             telemetry.addData("Front Right Ticks",frontRightMotor.getCurrentPosition());
 
-            frontLeftMotor.setPower(1.00);
-            backLeftMotor.setPower(1.00);
-
-            frontRightMotor.setPower(-1.00);
-            backRightMotor.setPower(-1.00);
-
             intakeLowMotor.setPower(0.00);
             intakeHighMotor.setPower(0.00);
 
-            leftShooterMotor.setPower(0.78);
-            rightShooterMotor.setPower(-0.78);
+            leftShooterMotor.setPower(0.87);
+            rightShooterMotor.setPower(-0.87);
 
-            leftShooterMotor.setMaxSpeed(2780);
-            rightShooterMotor.setMaxSpeed(2780);
+            leftShooterMotor.setMaxSpeed(2800);
+            rightShooterMotor.setMaxSpeed(2800);
 
 
         }
         // Stop at Vortex for 2.5 Seconds
-        if ((runtime.seconds() >= 20.41) && (runtime.seconds() <= 24.00))
+        if ((runtime.seconds() >= 8.01) && (runtime.seconds() <= 10.00))
         {
             telemetry.addData("4 Stop at Vortex ", runtime.seconds());
             telemetry.addData("Front Left Ticks:", frontLeftMotor.getCurrentPosition());
