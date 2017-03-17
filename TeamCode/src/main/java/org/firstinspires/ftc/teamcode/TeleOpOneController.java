@@ -54,7 +54,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list
  */
 
-@TeleOp(name="Template: Iterative OpMode", group="Iterative OpMode")  // @Autonomous(...) is the other common choice
+@TeleOp(name="TeleOp One Controller", group="Iterative OpMode")  // @Autonomous(...) is the other common choice
 //@Disabled
 public class TeleOpOneController extends OpMode
 {
