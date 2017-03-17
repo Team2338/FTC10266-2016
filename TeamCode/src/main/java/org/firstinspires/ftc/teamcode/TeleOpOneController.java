@@ -55,7 +55,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  */
 
 @TeleOp(name="Template: Iterative OpMode", group="Iterative OpMode")  // @Autonomous(...) is the other common choice
-@Disabled
+//@Disabled
 public class TeleOpOneController extends OpMode
 {
     /* Declare OpMode members. */
