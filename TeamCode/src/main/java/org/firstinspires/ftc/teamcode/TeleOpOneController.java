@@ -26,10 +26,10 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.teamcode;
 //
-// Carson Teleop
-// TELEOP, THIS CODE WORKS - FRONT AND CENTER RUN TOGETHER
-//                            I THINK IT IS THE IF STATEMENT
-//                            THAT I COMMENTED OUT, NEED TO TEST
+// TeleOp - USES ONLY 1 CONTROLLER GAMEPAD1
+// 
+// TELEOP, THIS CODE WORKS                           
+//                            
 //
 import com.ftdi.j2xx.D2xxManager;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
