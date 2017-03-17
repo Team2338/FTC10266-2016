@@ -33,9 +33,9 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package org.firstinspires.ftc.teamcode;
 //
 // Carson Teleop
-// TELEOP, THIS CODE WORKS - FRONT AND CENTER RUN TOGETHER
-//                            I THINK IT IS THE IF STATEMENT
-//                            THAT I COMMENTED OUT, NEED TO TEST
+// TELEOP, THIS CODE WORKS - USES 2 CONTROLLERS GAMEPAD1 and GAMEPAD2
+//                            
+//                            
 //
 import com.ftdi.j2xx.D2xxManager;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
