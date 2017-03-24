@@ -26,7 +26,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.teamcode;
 //
-// TeleOp - USES ONLY 1 CONTROLLER GAMEPAD1
+// TeleOp - USES ONLY 1 CONTROLLER GAMEPAD1, 80% Shooter Power
 // 
 // TELEOP, THIS CODE WORKS                           
 //                            
@@ -54,9 +54,9 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list
  */
 
-@TeleOp(name="TeleOp One Controller", group="Iterative OpMode")  // @Autonomous(...) is the other common choice
+@TeleOp(name="TeleOp One Controller 80", group="Iterative OpMode")  // @Autonomous(...) is the other common choice
 //@Disabled
-public class TeleOpOneController extends OpMode
+public class TeleOpOneController80 extends OpMode
 {
     /* Declare OpMode members. */
     private ElapsedTime runtime = new ElapsedTime();
