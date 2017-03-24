@@ -33,7 +33,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package org.firstinspires.ftc.teamcode;
 //
 // Carson Teleop
-// TELEOP, THIS CODE WORKS - USES 2 CONTROLLERS GAMEPAD1 and GAMEPAD2
+// TELEOP, THIS CODE WORKS - USES 2 CONTROLLERS GAMEPAD1 and GAMEPAD2, 80% Shooter Power
 //                            
 //                            
 //
@@ -60,9 +60,9 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list
  */
 
-@TeleOp(name="Template: Iterative OpMode", group="Iterative OpMode")  // @Autonomous(...) is the other common choice
+@TeleOp(name="Tele Op Two Controllers 80", group="Iterative OpMode")  // @Autonomous(...) is the other common choice
 @Disabled
-public class TemplateOpMode_Iterative extends OpMode
+public class TeleOpTwoController80 extends OpMode
 {
     /* Declare OpMode members. */
     private ElapsedTime runtime = new ElapsedTime();
