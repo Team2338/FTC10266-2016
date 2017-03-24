@@ -66,8 +66,14 @@ public class ConceptRegisterOpModes
     // Un-comment any line to enable that sample.
     // Or add your own lines to register your Team opmodes.
 
-    manager.register("TeleOp", TemplateOpMode_Iterative.class);
-    manager.register("SensorTest", TeleOpSensorTest.class);
+    //manager.register("TeleOp", TemplateOpMode_Iterative.class);
+    //manager.register("SensorTest", TeleOpSensorTest.class);
+    
+    manager.register("TeleOpOneController80", TeleOpOneController80.class);
+
+    manager.register("TeleOpTwoControllers80", TeleOpTwoController80.class);
+    manager.register("TeleOpTwoControllers100", TeleOpTwoController100.class);
+    
     // Basic Template
     // manager.register("Iterative Opmode",       TemplateOpMode_Iterative.class);
     // manager.register("Linear Opmode",          TemplateOpMode_Linear.class);
